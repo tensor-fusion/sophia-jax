@@ -12,3 +12,4 @@ In the wild it's recently been battle-tested on large-scale runs at Meta and a s
 ## TODO
 - [ ] Reproduce pretraining results with GPT models
 - [ ] Comparisons to AdamW, LION, etc.
+- [ ] 
