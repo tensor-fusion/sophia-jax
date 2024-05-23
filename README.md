@@ -1,6 +1,6 @@
-<img src="./sophia.png" width="700px"></img>
-
 # Sophia - JAX
+
+<img src="./sophia.png" width="650px"></img>
 
 JAX implementation of the [Sophia optimizer](https://arxiv.org/abs/2305.14342) for LLM pre-training.
 
