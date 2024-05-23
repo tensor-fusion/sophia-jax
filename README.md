@@ -6,7 +6,7 @@ JAX implementation of the [Sophia optimizer](https://arxiv.org/abs/2305.14342) f
 
 In the paper, Sophia is reported to be 2x faster than Adam on GPT-2.
 
-It's recently been battle-tested on large-scale runs at Meta and this speed-up was observed as well: https://x.com/ArmenAgha/status/1780149168692158658
+It's recently been battle-tested on large-scale runs at Meta and a similar speed-up was observed as well: https://x.com/ArmenAgha/status/1780149168692158658
 
 
 ## TODO
