@@ -2,11 +2,11 @@
 
 <img src="./sophia.png" width="650px"></img>
 
-JAX implementation of the [Sophia optimizer](https://arxiv.org/abs/2305.14342) for LLM pre-training.
+JAX implementation of the [Sophia optimizer](https://arxiv.org/abs/2305.14342) for LLM pre-training. Official PyTorch implementation is here: https://github.com/Liuhong99/Sophia
 
-Official PyTorch implementation is here: https://github.com/Liuhong99/Sophia
+In the paper, Sophia is reported to be 2x faster than Adam on GPT-2.
 
-In the paper, Sophia is reported to be 2x faster than Adam on GPT-2. It's recently been battle-tested on large-scale runs and this speed-up was observed as well.
+It's recently been battle-tested on large-scale runs at Meta and this speed-up was observed as well: https://x.com/ArmenAgha/status/1780149168692158658
 
 
 ## TODO
