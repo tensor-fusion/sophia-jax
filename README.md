@@ -1,6 +1,6 @@
 # Sophia - JAX
 
-<img src="./sophia.png" width="650px"></img>
+<img src="./sophia.png" width="700px"></img>
 
 JAX implementation of the [Sophia optimizer](https://arxiv.org/abs/2305.14342) for LLM pre-training. Official PyTorch implementation is here: https://github.com/Liuhong99/Sophia
 
