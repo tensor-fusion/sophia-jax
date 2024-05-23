@@ -138,16 +138,11 @@ class SophiaG:
                 hess = jnp.view_as_real(hess)
                 param = jnp.view_as_real(param)
 
-            # Update step
             step_t += 1
-
-            # Perform step weight decay
             param = param * (1 - lr * weight_decay)
-
             # Decay the first and second moment running average coefficient
             exp_avg = beta1 * exp_avg + (1 - beta1) * grad
 
-            # Compute the ratio and apply clipping
             ratio = jnp.clip(jnp.abs(exp_avg) / (rho * hess * bs + 1e-15), a_max=1.0)
             update = -lr * exp_avg * ratio
             param = param + update
@@ -166,10 +161,6 @@ class SophiaG:
         state: List[Dict[str, jnp.ndarray]],
         bs: int = 5120,
     ):
-        """
-        Perform a step of the optimizer.
-        """
-        # Update Hessian and Exponential Average
         new_state = self.update_hessian(params, grads, state)
         new_state = self.update_exp_avg(params, grads, new_state)
 
@@ -191,7 +182,6 @@ class SophiaG:
             state_steps.append(s["step"])
             hessians.append(s["hessian"])
 
-        # Call _sophiag to update parameters
         updated_params, new_state_steps, new_exp_avgs, new_hessians = self._sophiag(
             params_with_grad,
             grads_list,
@@ -208,7 +198,6 @@ class SophiaG:
             capturable=False,
         )
 
-        # Update the state with new values
         for i, s in enumerate(new_state):
             if grads[i] is None:
                 continue
